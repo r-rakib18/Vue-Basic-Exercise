@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Rendering</title>
+</head>
+<body>
+    
+    <div id="ConRen">
+        <p v-if="number >= 8 && 10 >= number">{{ text1 }}</p>
+        <p v-else-if="number == 7 ">{{ text2 }}</p>
+        <p v-else-if="number == 6 ">{{ text3 }}</p>
+        <p v-else-if="number == 5 ">{{ text4 }}</p>
+        <p v-else-if="number == 4 ">{{ text5 }}</p>
+        <p v-else-if="number < 0 || 10 < number">Invalid Input</p>
+        <p v-else>{{ text6 }}</p>
+
+        <!-- same code using v-show -->
+        
+        <p v-show="number >= 8 && 10 >= number">{{ text1 }}</p>
+        <p v-show="number == 7 ">{{ text2 }}</p>
+        <p v-show="number == 6 ">{{ text3 }}</p>
+        <p v-show="number == 5 ">{{ text4 }}</p>
+        <p v-show="number == 4 ">{{ text5 }}</p>
+        <p v-show="number < 0 || 10 < number">Invalid Input</p>
+        <p v-show>{{ text6 }}</p>
+
+        <!-- <p v-if="name == 'A' ">{{ text1}}
+            
+        </p>
+        <p v-else-if="name == 'B' ">
+            {{ text2 }}
+        </p>
+        <p v-else-if="name == 'C' ">
+            {{ text3 }}
+        </p>
+        <p v-else-if="name == 'D' ">
+            {{ text4 }}
+        </p>
+        <p v-else>
+            {{ text5 }}
+        </p> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="conditionalRendaring.js"></script>
+</body>
+</html>
